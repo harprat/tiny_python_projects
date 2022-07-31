@@ -42,12 +42,12 @@ def test_consonant():
 
 
 # --------------------------------------------------
-def test_consonant_upper():
-    """brigantine -> a Brigatine"""
+# def test_consonant_upper():
+#     """brigantine -> a Brigatine"""
 
-    for word in consonant_words:
-        out = getoutput(f'{prg} {word.title()}')
-        assert out.strip() == template.format('a', word.title())
+#     for word in consonant_words:
+#         out = getoutput(f'{prg} {word.title()}')
+#         assert out.strip() == template.format('a', word.title())
 
 
 # --------------------------------------------------
@@ -60,9 +60,34 @@ def test_vowel():
 
 
 # --------------------------------------------------
-def test_vowel_upper():
-    """octopus -> an Octopus"""
+# def test_vowel_upper():
+#     """octopus -> an Octopus"""
 
-    for word in vowel_words:
-        out = getoutput(f'{prg} {word.upper()}')
-        assert out.strip() == template.format('an', word.upper())
+#     for word in vowel_words:
+#         out = getoutput(f'{prg} {word.upper()}')
+#         assert out.strip() == template.format('an', word.upper())
+
+# --------------------------------------------------
+# def test_article_case_consonant():
+#     """a Brigantine -> A Brigatine"""
+    
+#     out = getoutput(f'{prg} {consonant_words[0]}')
+#     if consonant_words[0][0].isupper():
+#         assert out.strip() == template.format('A', consonant_words[0][0].upper())
+
+# --------------------------------------------------
+# def test_article_case_vowel():
+#     """a Brigantine -> A Brigatine"""
+    
+#     out = getoutput(f'{prg} {vowel_words[0][0]}')
+#     if vowel_words[0].isupper():
+#         assert out.strip() == template.format('An', vowel_words[0][0].upper())
+
+# --------------------------------------------------
+# def test_choose_side():
+#     """Starboard or larboard"""
+    
+#     template_starboard = 'Ahoy, Captain, {} {} off the starboard bow!'
+
+#     out = getoutput(f'{prg} -s Brigatine')
+#     assert out.strip() == template_starboard.format('A', 'Brigatine')
